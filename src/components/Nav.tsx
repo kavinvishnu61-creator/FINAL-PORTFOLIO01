@@ -110,7 +110,7 @@ export default function Nav() {
                 className="font-mono text-[10px] uppercase leading-relaxed tracking-[0.2em] text-faint"
               >
                 <p>{CONTACT.email}</p>
-                <p>Anthiyur, Erode — IST</p>
+                <p>Ganapathy, Coimbatore — IST</p>
               </motion.div>
             </div>
           </motion.div>

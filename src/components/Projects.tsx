@@ -57,10 +57,10 @@ export default function Projects() {
               <Tilt className="brackets relative flex h-full flex-col border border-dashed border-bline bg-[rgba(18,49,82,0.4)] backdrop-blur-[6px] transition-[border-color,box-shadow] duration-300 hover:border-copperb hover:shadow-[0_20px_44px_-16px_rgba(0,0,0,0.65),0_0_18px_rgba(205,131,71,0.18)]">
                 <div className="relative overflow-hidden border-b border-dashed border-bline">
                   <img
-                    src="/images/project-ponni.png"
-                    alt="Blueprint schematic of a thermal power plant fly-ash handling system"
+                    src="/images/project-ponni-real.png"
+                    alt="Thermal power plant fly-ash handling system"
                     loading="lazy"
-                    className="aspect-[16/9] w-full scale-[1.08] object-cover opacity-90 brightness-[0.95] transition duration-700 group-hover:scale-[1.14] group-hover:opacity-100"
+                    className="aspect-[16/9] w-full scale-[1.08] object-cover grayscale invert contrast-[1.15] opacity-75 mix-blend-screen transition duration-700 group-hover:scale-[1.14] group-hover:opacity-100"
                   />
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[rgba(12,33,54,0.55)] via-transparent to-transparent" />
                   <div className="scanline" />

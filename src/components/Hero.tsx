@@ -13,10 +13,8 @@ const FINAL_TEXT =
 const TITLE_BLOCK: { k: string; v: string; href?: string }[] = [
   { k: "Drawn By", v: "Kavin Vishnu S" },
   { k: "Discipline", v: "Mechanical Eng." },
-  { k: "Title", v: "Mechanical Engineer" },
-  { k: "Status", v: "Fresher" },
-  { k: "Contact", v: CONTACT.phonePretty, href: `tel:${CONTACT.phone}` },
-  { k: "Sheet · Rev", v: "01/01 · A" },
+  { k: "Title", v: "Product & Service Engineer" },
+  { k: "Contact", v: "7867846661", href: `tel:7867846661` },
 ];
 
 function Fade({
@@ -75,7 +73,7 @@ export default function Hero() {
             <Fade booted={booted} d={0}>
               <div className="mb-7 flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.18em] text-faint">
                 <span className="inline-block h-1.5 w-1.5 rotate-45 border border-copperb" />
-                Portfolio — Mechanical Engineering
+                Portfolio — Mechanical Engineer
                 <span className="h-px flex-1 bg-softline" />
               </div>
             </Fade>
@@ -129,7 +127,7 @@ export default function Hero() {
             <span className="text-sm text-copper">←</span>
             <span className="dim-rule hidden sm:block" />
             <span className="tracking-[0.08em]">
-              B.E. MECHANICAL ENGINEERING — GOVERNMENT COLLEGE OF ENGINEERING, ERODE
+              B.E. Mechanical Engineering – 1.5 Yrs Industry Experience
             </span>
             <span className="dim-rule hidden sm:block" />
             <span className="text-sm text-copper">→</span>
@@ -139,7 +137,7 @@ export default function Hero() {
         {/* title block */}
         <Fade booted={booted} d={0.85}>
           <div className="mt-9 border border-bline border-b-2 border-b-copper bg-[rgba(18,49,82,0.6)] backdrop-blur-md">
-            <div className="grid grid-cols-2 gap-px bg-softline md:grid-cols-3 xl:grid-cols-6">
+            <div className="grid grid-cols-2 gap-px bg-softline md:grid-cols-4 xl:grid-cols-4">
               {TITLE_BLOCK.map((c) => (
                 <div key={c.k} className="tbcell bg-[rgba(18,49,82,0.55)] px-4 py-4">
                   <div className="mb-1.5 font-mono text-[9px] uppercase tracking-[0.16em] text-faint">

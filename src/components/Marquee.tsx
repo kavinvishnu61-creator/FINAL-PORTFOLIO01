@@ -37,7 +37,7 @@ export default function Marquee({
       if (!el) return;
       const dt = Math.min((t - last) / 1000, 0.05);
       last = t;
-      const half = el.scrollWidth / 2;
+      const half = el.scrollWidth / 4;
       if (half <= 0) return;
       vel.current *= 0.93;
       const v = paused.current ? 0 : speed + vel.current;
@@ -75,6 +75,8 @@ export default function Marquee({
         ref={track}
         className="flex w-max py-3.5 font-mono text-[12px] uppercase tracking-[0.12em] text-dim will-change-transform"
       >
+        <Row />
+        <Row />
         <Row />
         <Row />
       </div>

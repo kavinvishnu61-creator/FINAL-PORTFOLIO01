@@ -3,9 +3,9 @@ import { Reveal, SectionHead, Wrap } from "./Section";
 
 const SPECS: { k: string; v: string; href?: string }[] = [
   { k: "Education", v: "B.E. Mechanical Engineering, GCE Erode" },
-  { k: "Role", v: "Product & Service Engineer" },
+  { k: "Role", v: "Mechanical Engineer" },
   { k: "Experience", v: "1.5 Years" },
-  { k: "Company", v: "Cherry Precision Products" },
+  { k: "Prev. Company", v: "Cherry Precision Products" },
   { k: "Phone", v: "7867846661", href: `tel:${CONTACT.phone}` },
   { k: "Email", v: CONTACT.email, href: `mailto:${CONTACT.email}` },
   { k: "Location", v: "Ganapathy, Coimbatore" },
@@ -31,7 +31,7 @@ export default function About() {
             </div>
 
             <p className="mb-5 max-w-[54ch] text-[15.5px] leading-relaxed text-dim">
-              Currently working as a <strong className="font-semibold text-ink">Product and Service Engineer at Cherry Precision Products</strong>
+              Previously worked as a <strong className="font-semibold text-ink">Product and Service Engineer at Cherry Precision Products</strong>
               , focused on bridging design intent with real-world product performance — supporting product 
               issues, coordinating fixes, and feeding field learnings back into engineering.
             </p>

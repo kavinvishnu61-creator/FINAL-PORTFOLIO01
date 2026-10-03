@@ -146,7 +146,7 @@ export default function Contact() {
         {/* footer strip */}
         <div className="mb-10 mt-7 flex flex-wrap items-center justify-between gap-3 border-t border-softline pt-5 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
           <span>© {new Date().getFullYear()} Kavin Vishnu S — Rev A</span>
-          <span className="hidden md:inline">Product & Service Engineer · Ganapathy, Coimbatore</span>
+
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             data-cad="DATUM"

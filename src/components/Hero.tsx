@@ -9,12 +9,6 @@ import { Wrap } from "./Section";
 const FINAL_TEXT =
   "Passionate and hardworking mechanical engineer looking to gain practical experience, solve real world problems and learn from industry experts.";
 
-const TITLE_BLOCK: { k: string; v: string; href?: string }[] = [
-  { k: "Drawn By", v: "Kavin Vishnu S" },
-  { k: "Discipline", v: "Mechanical Eng." },
-  { k: "Title", v: "Product & Service Engineer" },
-  { k: "Contact", v: "7867846661", href: `tel:7867846661` },
-];
 
 function Fade({
   booted,
@@ -133,32 +127,8 @@ export default function Hero() {
           </div>
         </Fade>
 
-        {/* title block */}
-        <Fade booted={booted} d={0.85}>
-          <div className="mt-9 border border-bline border-b-2 border-b-copper bg-[rgba(18,49,82,0.6)] backdrop-blur-md">
-            <div className="grid grid-cols-2 gap-px bg-softline md:grid-cols-4 xl:grid-cols-4">
-              {TITLE_BLOCK.map((c) => (
-                <div key={c.k} className="tbcell bg-[rgba(18,49,82,0.55)] px-4 py-4">
-                  <div className="mb-1.5 font-mono text-[9px] uppercase tracking-[0.16em] text-faint">
-                    {c.k}
-                  </div>
-                  <div className="break-words font-mono text-[12.5px] font-medium text-ink">
-                    {c.href ? (
-                      <a href={c.href} data-cad="CALL" className="transition-colors hover:text-copperb">
-                        {c.v}
-                      </a>
-                    ) : (
-                      c.v
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Fade>
-
         {/* scroll cue */}
-        <Fade booted={booted} d={1.1}>
+        <Fade booted={booted} d={0.85}>
           <a
             href="#about"
             data-cad="SCROLL"

@@ -30,13 +30,7 @@ export const MARQUEE_B = [
 export type SkillCat = "ALL" | "DESIGN" | "CAE/CAM" | "MFG" | "PROCESS";
 
 export const SKILLS: { name: string; cat: Exclude<SkillCat, "ALL">; lvl: number }[] = [
-  { name: "AutoCAD", cat: "DESIGN", lvl: 3 },
-  { name: "SolidWorks", cat: "DESIGN", lvl: 2 },
-  { name: "CATIA", cat: "DESIGN", lvl: 2 },
-  { name: "CNC Machines", cat: "MFG", lvl: 3 },
-  { name: "Time Management", cat: "PROCESS", lvl: 4 },
-  { name: "Quick Learner", cat: "PROCESS", lvl: 4 },
-  { name: "Adaptability", cat: "PROCESS", lvl: 4 },
+  // Content will be updated soon
 ];
 
 export interface RevItem {

@@ -68,7 +68,9 @@ export default function Skills() {
                   }`}
                 >
                   {t.label}
-                  <span className={active ? "text-navy-900/70" : "text-faint"}> [{n}]</span>
+                  {SKILLS.length > 0 && (
+                    <span className={active ? "text-navy-900/70" : "text-faint"}> [{n}]</span>
+                  )}
                 </button>
               );
             })}
@@ -95,48 +97,70 @@ export default function Skills() {
                 </tr>
               </thead>
               <tbody>
-                <AnimatePresence initial={false}>
-                  {rows.map((s, i) => (
-                    <motion.tr
-                      key={s.name}
-                      layout
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -6 }}
-                      transition={{ duration: 0.3, ease: EASE }}
-                      className="group"
+                {rows.length === 0 ? (
+                  <tr>
+                    <td
+                      colSpan={4}
+                      className="rounded-md border border-dashed border-copper/40 bg-[rgba(18,49,82,0.3)] px-6 py-12 text-center"
                     >
-                      <td
-                        className={`rounded-l-md px-4 py-3.5 font-mono text-[13px] text-copperb transition-colors group-hover:bg-[rgba(255,255,255,0.06)] ${
-                          i % 2 ? "bg-[rgba(255,255,255,0.03)]" : ""
-                        }`}
+                      <div className="flex flex-col items-center justify-center gap-2.5">
+                        <div className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-copperb">
+                          <span className="inline-block h-2 w-2 rounded-full bg-copper animate-pulse" />
+                          <span>// NOTICE: PENDING UPDATE</span>
+                        </div>
+                        <p className="font-mono text-sm text-ink">
+                          Skills content will be updated soon.
+                        </p>
+                        <span className="font-mono text-[10.5px] uppercase tracking-widest text-faint">
+                          STATUS: TO BE UPDATED SOON
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                ) : (
+                  <AnimatePresence initial={false}>
+                    {rows.map((s, i) => (
+                      <motion.tr
+                        key={s.name}
+                        layout
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -6 }}
+                        transition={{ duration: 0.3, ease: EASE }}
+                        className="group"
                       >
-                        {String(i + 1).padStart(2, "0")}
-                      </td>
-                      <td
-                        className={`px-4 py-3.5 text-sm text-ink transition-colors group-hover:bg-[rgba(255,255,255,0.06)] ${
-                          i % 2 ? "bg-[rgba(255,255,255,0.03)]" : ""
-                        }`}
-                      >
-                        {s.name}
-                      </td>
-                      <td
-                        className={`px-4 py-3.5 font-mono text-[11px] uppercase tracking-[0.08em] text-dim transition-colors group-hover:bg-[rgba(255,255,255,0.06)] ${
-                          i % 2 ? "bg-[rgba(255,255,255,0.03)]" : ""
-                        }`}
-                      >
-                        {s.cat}
-                      </td>
-                      <td
-                        className={`rounded-r-md px-4 py-3.5 transition-colors group-hover:bg-[rgba(255,255,255,0.06)] ${
-                          i % 2 ? "bg-[rgba(255,255,255,0.03)]" : ""
-                        }`}
-                      >
-                        <LevelBar lvl={s.lvl} name={s.name} />
-                      </td>
-                    </motion.tr>
-                  ))}
-                </AnimatePresence>
+                        <td
+                          className={`rounded-l-md px-4 py-3.5 font-mono text-[13px] text-copperb transition-colors group-hover:bg-[rgba(255,255,255,0.06)] ${
+                            i % 2 ? "bg-[rgba(255,255,255,0.03)]" : ""
+                          }`}
+                        >
+                          {String(i + 1).padStart(2, "0")}
+                        </td>
+                        <td
+                          className={`px-4 py-3.5 text-sm text-ink transition-colors group-hover:bg-[rgba(255,255,255,0.06)] ${
+                            i % 2 ? "bg-[rgba(255,255,255,0.03)]" : ""
+                          }`}
+                        >
+                          {s.name}
+                        </td>
+                        <td
+                          className={`px-4 py-3.5 font-mono text-[11px] uppercase tracking-[0.08em] text-dim transition-colors group-hover:bg-[rgba(255,255,255,0.06)] ${
+                            i % 2 ? "bg-[rgba(255,255,255,0.03)]" : ""
+                          }`}
+                        >
+                          {s.cat}
+                        </td>
+                        <td
+                          className={`rounded-r-md px-4 py-3.5 transition-colors group-hover:bg-[rgba(255,255,255,0.06)] ${
+                            i % 2 ? "bg-[rgba(255,255,255,0.03)]" : ""
+                          }`}
+                        >
+                          <LevelBar lvl={s.lvl} name={s.name} />
+                        </td>
+                      </motion.tr>
+                    ))}
+                  </AnimatePresence>
+                )}
               </tbody>
             </table>
           </div>
@@ -145,7 +169,11 @@ export default function Skills() {
         <Reveal delay={0.1}>
           <div className="mt-6 flex flex-wrap items-center justify-between gap-2 font-mono text-[10px] uppercase tracking-[0.14em] text-faint">
             <span>Proficiency — self-assessed against live project use</span>
-            <span>QTY {String(rows.length).padStart(2, "0")} · {cat} FILTER</span>
+            <span>
+              {SKILLS.length === 0
+                ? "STATUS: TO BE UPDATED SOON"
+                : `QTY ${String(rows.length).padStart(2, "0")} · ${cat} FILTER`}
+            </span>
           </div>
         </Reveal>
       </Wrap>

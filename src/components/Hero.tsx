@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useApp } from "../lib/store";
 import { EASE } from "../lib/anim";
-import { CONTACT } from "../lib/content";
 import { GearsFigure } from "./Gear";
 import { Wrap } from "./Section";
 
